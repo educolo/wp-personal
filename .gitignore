@@ -1,0 +1,24 @@
+# Ignore core WordPress files
+wp-admin/
+wp-includes/
+wp-config.php
+
+# Ignore WordPress database files
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# Ignore development files
+node_modules/
+.sass-cache/
+bower_components/
+
+# Ignore log files
+wp-content/debug.log
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db
+
+# Ignore Intellij project files
+.idea/
