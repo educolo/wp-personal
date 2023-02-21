@@ -17,6 +17,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          local-dir: ./wp-content
+          local-dir: ./wp-content/
           remote-dir: /home/dh_3gdtpn/eduardoseelig.com.ar/wp-content
 
