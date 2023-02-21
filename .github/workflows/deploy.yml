@@ -20,4 +20,6 @@ jobs:
           local-dir: ./wp-content/
           server-dir: /home/dh_3gdtpn/eduardoseelig.com.ar/wp-content/
           protocol: ftps
+          security: loose
+          log-level: verbose
 
