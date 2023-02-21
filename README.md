@@ -1,4 +1,4 @@
-#Simple personal site with Wordpress
+# Simple personal site with Wordpress
 I made this site to play a little with WP, some front end technologies and simple github actions to deploy.
 
 The idea behind this is to have a working site in a few days with a nice development experience.
