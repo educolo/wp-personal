@@ -17,7 +17,10 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           script: |
             cd /home/dh_3gdtpn/eduardoseelig.com.ar
+            git reset --hard HEAD
             git pull origin master
+            rm -f docker-compose.yml README.md .gitignore
+            rm -rf .github
 #            wp core update --version=<your-wp-version>
 #            wp plugin update --all
 #            wp theme update --all
