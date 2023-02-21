@@ -1,25 +1,23 @@
 name: Deploy to DreamHost
-
 on:
   push:
     branches:
       - master
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to DreamHost
+        uses: appleboy/ssh-action@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local-dir: ./wp-content/
-          server-dir: /home/dh_3gdtpn/eduardoseelig.com.ar/wp-content/
-          protocol: ftps
-          security: loose
-          log-level: verbose
-
+          script: |
+            cd /home/dh_3gdtpn/eduardoseelig.com.ar
+            git pull origin master
+#            wp core update --version=<your-wp-version>
+#            wp plugin update --all
+#            wp theme update --all
