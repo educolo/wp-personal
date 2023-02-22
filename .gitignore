@@ -12,6 +12,8 @@ wp-content/upgrade/
 node_modules/
 .sass-cache/
 bower_components/
+vendor/
+.phpunit.result.cache
 
 # Ignore log files
 wp-content/debug.log
